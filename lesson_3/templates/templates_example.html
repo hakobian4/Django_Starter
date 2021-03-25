@@ -1,0 +1,11 @@
+
+<h1>Value for context 1 {{ str }}</h1>
+
+<h1>Value for context 2 {{ int }}</h1>
+
+<h1>Value for context 3 {{ str }}</h1>
+
+
+{% for book in books|dictsort:"author.age" %}
+    * {{ book.title }} ({{ book.author.name }})
+{% endfor %}
